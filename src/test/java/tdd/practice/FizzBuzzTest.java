@@ -25,6 +25,11 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void should_return_Fizz_when_input_13() {
+        assertFizzBuzz("13", "Fizz");
+    }
+
+    @Test
     public void should_return_Buzz_when_input_5() {
         assertFizzBuzz("5", "Buzz");
     }

@@ -8,7 +8,7 @@ public class Rules {
     }
 
     public boolean fizzMatcher() {
-        return isMultiple(3);
+        return isMultiple(3) || isContains("3");
     }
 
     public boolean buzzMatcher() {
@@ -37,5 +37,9 @@ public class Rules {
 
     private boolean isMultiple(int i) {
         return Integer.parseInt(num) % i == 0;
+    }
+
+    private boolean isContains(String str) {
+        return num.contains(str);
     }
 }
