@@ -3,12 +3,13 @@
  */
 package tdd.practice;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test
+    public void testAppHasAGreeting() {
         App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        assertThat( classUnderTest.getGreeting()).isEqualTo("Hello world.");
     }
 }
