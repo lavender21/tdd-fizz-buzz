@@ -1,7 +1,17 @@
 package tdd.practice;
 
 public class Rules {
-    public String parse(String input) {
-        return input;
+    private String num;
+
+    public Rules(String input) {
+        num = input;
+    }
+
+    public boolean fizzMatcher() {
+        return isMultiple(3);
+    }
+
+    private boolean isMultiple(int i) {
+        return Integer.parseInt(num) % i == 0;
     }
 }

@@ -6,7 +6,7 @@ public class FizzBuzzGame {
 
     public FizzBuzzGame(String input) {
         num = input;
-        rules = new Rules();
+        rules = new Rules(num);
     }
     public String parse() {
         if (isMultiple(3) && isMultiple(5) && isMultiple(7)) {
@@ -21,7 +21,7 @@ public class FizzBuzzGame {
         if (isMultiple(5) && isMultiple(7)) {
             return "BuzzWhizz";
         }
-        if (isMultiple(3)) {
+        if (rules.fizzMatcher()) {
             return "Fizz";
         }
         if (isMultiple(5)) {
@@ -30,7 +30,7 @@ public class FizzBuzzGame {
         if (isMultiple(7)) {
             return "Whizz";
         }
-        return rules.parse(num);
+        return num;
     }
 
     private boolean isMultiple(int i) {
