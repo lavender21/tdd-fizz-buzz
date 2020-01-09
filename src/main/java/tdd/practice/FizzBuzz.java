@@ -7,6 +7,18 @@ public class FizzBuzz {
         num = input;
     }
     public String parse() {
+        if (isMultiple(3) && isMultiple(5) && isMultiple(7)) {
+            return "FizzBuzzWhizz";
+        }
+        if (isMultiple(3) && isMultiple(5)) {
+            return "FizzBuzz";
+        }
+        if (isMultiple(3) && isMultiple(7)) {
+            return "FizzWhizz";
+        }
+        if (isMultiple(5) && isMultiple(7)) {
+            return "BuzzWhizz";
+        }
         if (isMultiple(3)) {
             return "Fizz";
         }
