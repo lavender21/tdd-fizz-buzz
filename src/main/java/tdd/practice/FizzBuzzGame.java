@@ -24,7 +24,7 @@ public class FizzBuzzGame {
         if (rules.fizzMatcher()) {
             return "Fizz";
         }
-        if (isMultiple(5)) {
+        if (rules.buzzMatcher()) {
             return "Buzz";
         }
         if (isMultiple(7)) {
