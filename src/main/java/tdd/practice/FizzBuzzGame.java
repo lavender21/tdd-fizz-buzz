@@ -9,16 +9,16 @@ public class FizzBuzzGame {
         rules = new Rules(num);
     }
     public String parse() {
-        if (isMultiple(3) && isMultiple(5) && isMultiple(7)) {
+        if (rules.fizzBuzzWhizzMatcher()) {
             return "FizzBuzzWhizz";
         }
-        if (isMultiple(3) && isMultiple(5)) {
+        if (rules.fizzBuzzMatcher()) {
             return "FizzBuzz";
         }
-        if (isMultiple(3) && isMultiple(7)) {
+        if (rules.fizzWhizzMatcher()) {
             return "FizzWhizz";
         }
-        if (isMultiple(5) && isMultiple(7)) {
+        if (rules.buzzWhizzMatcher()) {
             return "BuzzWhizz";
         }
         if (rules.fizzMatcher()) {
@@ -31,9 +31,5 @@ public class FizzBuzzGame {
             return "Whizz";
         }
         return num;
-    }
-
-    private boolean isMultiple(int i) {
-        return Integer.parseInt(num) % i == 0;
     }
 }
