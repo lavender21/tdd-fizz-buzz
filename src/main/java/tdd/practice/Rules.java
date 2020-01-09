@@ -15,6 +15,10 @@ public class Rules {
         return isMultiple(5);
     }
 
+    public boolean whizzMatcher() {
+        return isMultiple(7);
+    }
+
     private boolean isMultiple(int i) {
         return Integer.parseInt(num) % i == 0;
     }
