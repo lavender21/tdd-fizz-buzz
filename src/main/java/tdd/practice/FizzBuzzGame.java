@@ -1,10 +1,12 @@
 package tdd.practice;
 
-public class FizzBuzz {
+public class FizzBuzzGame {
     private String num;
+    private Rules rules;
 
-    public FizzBuzz(String input) {
+    public FizzBuzzGame(String input) {
         num = input;
+        rules = new Rules();
     }
     public String parse() {
         if (isMultiple(3) && isMultiple(5) && isMultiple(7)) {
@@ -28,7 +30,7 @@ public class FizzBuzz {
         if (isMultiple(7)) {
             return "Whizz";
         }
-        return num;
+        return rules.parse(num);
     }
 
     private boolean isMultiple(int i) {

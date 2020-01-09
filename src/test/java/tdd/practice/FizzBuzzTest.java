@@ -5,8 +5,8 @@ import static org.assertj.core.api.Assertions.*;
 
 public class FizzBuzzTest {
     private void assertFizzBuzz(String input, String expect) {
-        FizzBuzz fizzBuzz = new FizzBuzz(input);
-        assertThat(fizzBuzz.parse()).isEqualTo(expect);
+        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame(input);
+        assertThat(fizzBuzzGame.parse()).isEqualTo(expect);
     }
 
     @Test
