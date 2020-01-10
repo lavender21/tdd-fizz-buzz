@@ -23,8 +23,17 @@ public class FizzBuzzGame {
         if (isContains("7")) {
             handleContain7();
         }
+        if (isContains("5")) {
+            handleContain5();
+        }
 
         output = output.length() > 0 ? output : defaultValue;
+    }
+
+    private void handleContain5() {
+        if (isContains("7") && isContains("3")) {
+            output = "Fizz";
+        }
     }
 
     private void handleContain7() {
