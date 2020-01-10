@@ -9,11 +9,7 @@ public class FizzBuzzGame {
         output = "";
     }
 
-    public String getOutput() {
-        return output;
-    }
-
-    public void parse() {
+    public String parse() {
         String defaultValue = Integer.toString(num);
         mod3And5And7();
 
@@ -27,7 +23,7 @@ public class FizzBuzzGame {
             handleContain5();
         }
 
-        output = output.length() > 0 ? output : defaultValue;
+        return output.length() > 0 ? output : defaultValue;
     }
 
     private void handleContain5() {

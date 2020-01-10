@@ -113,8 +113,7 @@ public class FizzBuzzGameTest {
 
     private void assertFizzBuzzRule(int num, String expected) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame(num);
-        fizzBuzzGame.parse();
-        assertThat(fizzBuzzGame.getOutput()).isEqualTo(expected);
+        assertThat(fizzBuzzGame.parse()).isEqualTo(expected);
     }
 
 }
