@@ -4,103 +4,103 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class FizzBuzzTest {
-    private void assertFizzBuzz(String input, String expect) {
+    private void assertFizzBuzz(Integer input, String expect) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame(input);
         assertThat(fizzBuzzGame.parse()).isEqualTo(expect);
     }
 
     @Test
     public void should_return_1_when_input_1() {
-        assertFizzBuzz("1", "1");
+        assertFizzBuzz(1, "1");
     }
 
     @Test
     public void should_return_Fizz_when_input_3() {
-        assertFizzBuzz("3", "Fizz");
+        assertFizzBuzz(3, "Fizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_6() {
-        assertFizzBuzz("6", "Fizz");
+        assertFizzBuzz(6, "Fizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_13() {
-        assertFizzBuzz("13", "Fizz");
+        assertFizzBuzz(13, "Fizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_30() {
-        assertFizzBuzz("30", "Fizz");
+        assertFizzBuzz(30, "Fizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_75() {
-        assertFizzBuzz("75", "Fizz");
+        assertFizzBuzz(75, "Fizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_57() {
-        assertFizzBuzz("57", "Fizz");
+        assertFizzBuzz(57, "Fizz");
     }
 
     @Test
     public void should_return_Buzz_when_input_5() {
-        assertFizzBuzz("5", "Buzz");
+        assertFizzBuzz(5, "Buzz");
     }
 
     @Test
     public void should_return_Buzz_when_input_51() {
-        assertFizzBuzz("51", "Buzz");
+        assertFizzBuzz(5, "Buzz");
     }
 
     @Test
     public void should_return_Buzz_when_input_53() {
-        assertFizzBuzz("53", "Buzz");
+        assertFizzBuzz(5, "Buzz");
     }
 
     @Test
     public void should_return_Buzz_when_input_10() {
-        assertFizzBuzz("10", "Buzz");
+        assertFizzBuzz(10, "Buzz");
     }
 
     @Test
     public void should_return_Whizz_when_input_7() {
-        assertFizzBuzz("7", "Whizz");
+        assertFizzBuzz(7, "Whizz");
     }
 
     @Test
     public void should_return_Whizz_when_input_14() {
-        assertFizzBuzz("14", "Whizz");
+        assertFizzBuzz(14, "Whizz");
     }
 
     @Test
     public void should_return_70_when_input_70() {
-        assertFizzBuzz("70", "Whizz");
+        assertFizzBuzz(70, "Whizz");
     }
 
     @Test
     public void should_return_FizzBuzz_when_input_15() {
-        assertFizzBuzz("15", "FizzBuzz");
+        assertFizzBuzz(15, "FizzBuzz");
     }
 
     @Test
     public void should_return_FizzWhizz_when_input_21() {
-        assertFizzBuzz("21", "FizzWhizz");
+        assertFizzBuzz(21, "FizzWhizz");
     }
 
     @Test
     public void should_return_BuzzWhizz_when_input_35() {
-        assertFizzBuzz("35", "BuzzWhizz");
+        assertFizzBuzz(35, "BuzzWhizz");
     }
 
     @Test
     public void should_return_FizzBuzzWhizz_when_input_105() {
-        assertFizzBuzz("105", "FizzBuzzWhizz");
+        assertFizzBuzz(105, "FizzBuzzWhizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_37() {
-        assertFizzBuzz("37", "Fizz");
+        assertFizzBuzz(37, "Fizz");
     }
 }

@@ -1,9 +1,9 @@
 package tdd.practice;
 
 public class Rules {
-    private String num;
+    private Integer num;
 
-    public Rules(String input) {
+    public Rules(Integer input) {
         num = input;
     }
 
@@ -57,10 +57,10 @@ public class Rules {
     }
 
     private boolean isMultiple(int i) {
-        return Integer.parseInt(num) % i == 0;
+        return num % i == 0;
     }
 
     private boolean isContains(String str) {
-        return num.contains(str);
+        return Integer.toString(num).contains(str);
     }
 }

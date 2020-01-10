@@ -1,10 +1,10 @@
 package tdd.practice;
 
 public class FizzBuzzGame {
-    private String num;
+    private Integer num;
     private Rules rules;
 
-    public FizzBuzzGame(String input) {
+    public FizzBuzzGame(Integer input) {
         num = input;
         rules = new Rules(num);
     }
@@ -30,6 +30,6 @@ public class FizzBuzzGame {
         if (rules.whizzMatcher()) {
             return "Whizz";
         }
-        return num;
+        return Integer.toString(num);
     }
 }
