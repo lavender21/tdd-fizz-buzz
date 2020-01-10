@@ -17,6 +17,8 @@ public class FizzBuzzGame {
             } else {
                 result = mod5And7();
             }
+        } else if (isContains("7") && isMultiple(3)) {
+            result = "Fizz";
         }
         return result.length() > 0 ? result :Integer.toString(num);
     }
