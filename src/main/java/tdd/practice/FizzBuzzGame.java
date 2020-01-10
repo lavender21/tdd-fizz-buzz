@@ -13,21 +13,20 @@ public class FizzBuzzGame {
         return output;
     }
 
-    public String parse() {
-        String result = "";
-        result = mod3And5And7();
+    public void parse() {
+        String init = output;
+        output = mod3And5And7();
 
         if (isContains("3")) {
             if (!isContains("5")) {
-                result = "Fizz";
+                output = "Fizz";
             } else {
-                result = mod5And7();
+                output = mod5And7();
             }
         } else if (isContains("7") && isMultiple(3)) {
-            result = "Fizz";
+            output = "Fizz";
         }
-        output = result.length() > 0 ? result : output;
-        return result.length() > 0 ? result :Integer.toString(num);
+        output = output.length() > 0 ? output : init;
     }
 
     private String mod5And7() {
