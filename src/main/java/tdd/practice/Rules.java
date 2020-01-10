@@ -8,6 +8,9 @@ public class Rules {
     }
 
     public boolean fizzMatcher() {
+        if (isContains("7")) {
+            return isContains("3") || isMultiple(3);
+        }
         if (isContains("5")) {
             return false;
         }
@@ -15,6 +18,9 @@ public class Rules {
     }
 
     public boolean buzzMatcher() {
+        if (isContains("7")) {
+            return false;
+        }
         return isContains("5") || isMultiple(5);
     }
 
@@ -23,18 +29,30 @@ public class Rules {
     }
 
     public boolean fizzBuzzMatcher() {
+        if (isContains("7")) {
+            return false;
+        }
         return isMultiple(3) && isMultiple(5) && !isContains("3");
     }
 
     public boolean fizzWhizzMatcher() {
+        if (isContains("3")) {
+            return false;
+        }
         return isMultiple(3) && isMultiple(7);
     }
 
     public boolean buzzWhizzMatcher() {
+        if (isContains("7")) {
+            return false;
+        }
         return isMultiple(5) && isMultiple(7);
     }
 
     public boolean fizzBuzzWhizzMatcher() {
+        if (isContains("7")) {
+            return false;
+        }
         return isMultiple(3) && isMultiple(5) && isMultiple(7);
     }
 
