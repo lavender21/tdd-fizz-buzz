@@ -8,11 +8,14 @@ public class Rules {
     }
 
     public boolean fizzMatcher() {
-        return isMultiple(3) || isContains("3");
+        if (isContains("5")) {
+            return false;
+        }
+        return isContains("3") || isMultiple(3);
     }
 
     public boolean buzzMatcher() {
-        return isMultiple(5);
+        return isContains("5") || isMultiple(5);
     }
 
     public boolean whizzMatcher() {
@@ -20,7 +23,7 @@ public class Rules {
     }
 
     public boolean fizzBuzzMatcher() {
-        return isMultiple(3) && isMultiple(5);
+        return isMultiple(3) && isMultiple(5) && !isContains("3");
     }
 
     public boolean fizzWhizzMatcher() {
