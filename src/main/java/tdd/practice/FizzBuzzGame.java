@@ -2,16 +2,17 @@ package tdd.practice;
 
 public class FizzBuzzGame {
     public String handleNumber(int num) {
+        String result = "";
         if (isMultiple(num, 3)) {
-            return "Fizz";
+            result = "Fizz";
         }
         if (isMultiple(num, 5)) {
-            return "Buzz";
+            result += "Buzz";
         }
         if (isMultiple(num, 7)) {
-            return "Whizz";
+            result = "Whizz";
         }
-        return Integer.toString(num);
+        return result.length() > 0 ? result :Integer.toString(num);
     }
 
     private boolean isMultiple(int num, int i) {
