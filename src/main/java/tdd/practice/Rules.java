@@ -29,10 +29,10 @@ public class Rules {
     }
 
     public boolean fizzBuzzMatcher() {
-        if (isContains("7")) {
+        if (isContains("7") || isContains("3")) {
             return false;
         }
-        return isMultiple(3) && isMultiple(5) && !isContains("3");
+        return isMultiple(3) && isMultiple(5);
     }
 
     public boolean fizzWhizzMatcher() {
