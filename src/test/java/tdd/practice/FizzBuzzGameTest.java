@@ -56,6 +56,11 @@ public class FizzBuzzGameTest {
         assertFizzBuzzRule(30, "Fizz");
     }
 
+    @Test
+    public void should_return_Buzz_when_input_135() {
+        assertFizzBuzzRule(135, "Buzz");
+    }
+
     private void assertFizzBuzzRule(int num, String expected) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         assertThat(fizzBuzzGame.handleNumber(num)).isEqualTo(expected);

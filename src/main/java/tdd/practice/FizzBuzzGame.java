@@ -5,8 +5,17 @@ public class FizzBuzzGame {
         String result = "";
         result = handleModNumber(num);
 
-        if (isContains(num, "3") && !isContains(num, "5")) {
-            result = "Fizz";
+        if (isContains(num, "3")) {
+            if (!isContains(num, "5")) {
+                result = "Fizz";
+            } else {
+                if (isMultiple(num,5)) {
+                    result = "Buzz";
+                }
+                if (isMultiple(num, 7)) {
+                    result +="Whizz";
+                }
+            }
         }
         return result.length() > 0 ? result :Integer.toString(num);
     }
