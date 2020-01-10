@@ -14,19 +14,24 @@ public class FizzBuzzGame {
     }
 
     public void parse() {
-        String init = Integer.toString(num);
+        String defaultValue = Integer.toString(num);
         mod3And5And7();
 
         if (isContains("3")) {
-            if (!isContains("5")) {
-                output = "Fizz";
-            } else {
-                mod5And7();
-            }
+            contain3();
         } else if (isContains("7")) {
             mod3();
         }
-        output = output.length() > 0 ? output : init;
+
+        output = output.length() > 0 ? output : defaultValue;
+    }
+
+    private void contain3() {
+        if (!isContains("5")) {
+            output = "Fizz";
+        } else {
+            mod5And7();
+        }
     }
 
     private void mod3() {
