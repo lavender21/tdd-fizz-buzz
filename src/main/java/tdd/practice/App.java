@@ -9,9 +9,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        for( int i = 0; i < 120; i++) {
-            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame(i+1);
-            System.out.println(fizzBuzzGame.parse());
-        }
+        FizzBuzzPrinter fizzBuzzPrinter = new FizzBuzzPrinter();
+        fizzBuzzPrinter.print(120);
     }
 }
