@@ -51,12 +51,12 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_Buzz_when_input_51() {
-        assertFizzBuzz(5, "Buzz");
+        assertFizzBuzz(51, "51");
     }
 
     @Test
     public void should_return_Buzz_when_input_53() {
-        assertFizzBuzz(5, "Buzz");
+        assertFizzBuzz(53, "53");
     }
 
     @Test
@@ -80,8 +80,8 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_FizzBuzz_when_input_15() {
-        assertFizzBuzz(15, "FizzBuzz");
+    public void should_return_Buzz_when_input_15() {
+        assertFizzBuzz(15, "Buzz");
     }
 
     @Test
@@ -96,11 +96,26 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_FizzBuzzWhizz_when_input_105() {
-        assertFizzBuzz(105, "FizzBuzzWhizz");
+        assertFizzBuzz(105, "BuzzWhizz");
     }
 
     @Test
     public void should_return_Fizz_when_input_37() {
         assertFizzBuzz(37, "Fizz");
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_input_567() {
+        assertFizzBuzz(567, "FizzWhizz");
+    }
+
+    @Test
+    public void should_return_Buzz_when_input_135() {
+        assertFizzBuzz(135, "Buzz");
+    }
+
+    @Test
+    public void should_return_Fizz_when_input_630() {
+        assertFizzBuzz(630, "Fizz");
     }
 }
