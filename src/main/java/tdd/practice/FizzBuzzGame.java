@@ -12,6 +12,10 @@ public class FizzBuzzGame {
         if (isMultiple(num, 7)) {
             result += "Whizz";
         }
+
+        if (Integer.toString(num).contains("3")) {
+            result = "Fizz";
+        }
         return result.length() > 0 ? result :Integer.toString(num);
     }
 
