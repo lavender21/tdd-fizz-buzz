@@ -19,7 +19,8 @@ public class FizzBuzzGame {
 
         if (isContains("3")) {
             handleContain3();
-        } else if (isContains("7")) {
+        }
+        if (isContains("7")) {
             handleContain7();
         }
 
@@ -27,14 +28,19 @@ public class FizzBuzzGame {
     }
 
     private void handleContain7() {
+        if (isContains("3")) {
+            handleContain3();
+            return;
+        }
         if (isMultiple(7)) {
             mod3And7();
-        } else {
-            mod3();
+            return;
         }
+        mod3();
     }
 
     private void handleContain3() {
+
         if (isContains("5")) {
             mod5And7();
         } else {
