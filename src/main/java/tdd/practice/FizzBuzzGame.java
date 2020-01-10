@@ -18,23 +18,27 @@ public class FizzBuzzGame {
         mod3And5And7();
 
         if (isContains("3")) {
-            contain3();
+            handleContain3();
         } else if (isContains("7")) {
-            if (isMultiple(7)) {
-                mod3And7();
-            } else {
-                mod3();
-            }
+            handleContain7();
         }
 
         output = output.length() > 0 ? output : defaultValue;
     }
 
-    private void contain3() {
-        if (!isContains("5")) {
-            output = "Fizz";
+    private void handleContain7() {
+        if (isMultiple(7)) {
+            mod3And7();
         } else {
+            mod3();
+        }
+    }
+
+    private void handleContain3() {
+        if (isContains("5")) {
             mod5And7();
+        } else {
+            output = "Fizz";
         }
     }
 
