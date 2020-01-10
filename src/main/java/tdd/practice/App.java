@@ -9,6 +9,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        for( int i = 0; i < 1024; i++) {
+            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame(i+1);
+            String result = fizzBuzzGame.parse();
+            System.out.println(i + 1 +" "+result);
+        }
     }
 }
