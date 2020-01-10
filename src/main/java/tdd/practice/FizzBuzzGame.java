@@ -21,23 +21,40 @@ public class FizzBuzzGame {
             if (!isContains("5")) {
                 output = "Fizz";
             } else {
-                output = mod5And7();
+                mod5And7();
             }
-        } else if (isContains("7") && isMultiple(3)) {
-            output = "Fizz";
+        } else if (isContains("7")) {
+            mod3();
         }
         output = output.length() > 0 ? output : init;
     }
 
-    private String mod5And7() {
-        String result = "";
+    private void mod3() {
+        if (isMultiple(3)) {
+            output =  "Fizz";
+        }
+    }
+
+    private void mod5() {
         if (isMultiple(5)) {
-            result = "Buzz";
+            output =  "Buzz";
+        }
+    }
+
+    private void mod7() {
+        if (isMultiple(7)) {
+            output =  "Whizz";
+        }
+    }
+
+    private void mod5And7() {
+        output = "";
+        if (isMultiple(5)) {
+            output = "Buzz";
         }
         if (isMultiple( 7)) {
-            result +="Whizz";
+            output +="Whizz";
         }
-        return result;
     }
 
     private String mod3And5And7() {
@@ -45,7 +62,8 @@ public class FizzBuzzGame {
         if (isMultiple(3)) {
             result = "Fizz";
         }
-        result += mod5And7();
+        mod5And7();
+        result += output;
         return result;
     }
 
