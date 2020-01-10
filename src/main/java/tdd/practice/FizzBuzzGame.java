@@ -6,7 +6,7 @@ public class FizzBuzzGame {
 
     public FizzBuzzGame(int input) {
         num = input;
-        output = Integer.toString(input);
+        output = "";
     }
 
     public String getOutput() {
@@ -14,8 +14,8 @@ public class FizzBuzzGame {
     }
 
     public void parse() {
-        String init = output;
-        output = mod3And5And7();
+        String init = Integer.toString(num);
+        mod3And5And7();
 
         if (isContains("3")) {
             if (!isContains("5")) {
@@ -37,34 +37,27 @@ public class FizzBuzzGame {
 
     private void mod5() {
         if (isMultiple(5)) {
-            output =  "Buzz";
+            output +=  "Buzz";
         }
     }
 
     private void mod7() {
         if (isMultiple(7)) {
-            output =  "Whizz";
+            output += "Whizz";
         }
     }
 
     private void mod5And7() {
         output = "";
-        if (isMultiple(5)) {
-            output = "Buzz";
-        }
-        if (isMultiple( 7)) {
-            output +="Whizz";
-        }
+        mod5();
+        mod7();
     }
 
-    private String mod3And5And7() {
-        String result = "";
-        if (isMultiple(3)) {
-            result = "Fizz";
-        }
-        mod5And7();
-        result += output;
-        return result;
+    private void mod3And5And7() {
+        output = "";
+        mod3();
+        mod5();
+        mod7();
     }
 
     private boolean isContains( String str) {
