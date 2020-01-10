@@ -21,9 +21,7 @@ public class FizzBuzzGame {
             contain3();
         } else if (isContains("7")) {
             if (isMultiple(7)) {
-                output = "";
-                mod3();
-                mod7();
+                mod3And7();
             } else {
                 mod3();
             }
@@ -56,6 +54,12 @@ public class FizzBuzzGame {
         if (isMultiple(7)) {
             output += "Whizz";
         }
+    }
+
+    private void mod3And7() {
+        output = "";
+        mod3();
+        mod7();
     }
 
     private void mod5And7() {
