@@ -10,7 +10,7 @@ public class FizzBuzzGame {
             result += "Buzz";
         }
         if (isMultiple(num, 7)) {
-            result = "Whizz";
+            result += "Whizz";
         }
         return result.length() > 0 ? result :Integer.toString(num);
     }
