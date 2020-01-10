@@ -38,7 +38,7 @@ public class FizzBuzzGameTest {
 
     @Test
     public void should_return_Fizz_when_input_35() {
-        assertFizzBuzzRule(35, "Fizz");
+        assertFizzBuzzRule(35, "BuzzWhizz");
     }
 
     @Test
