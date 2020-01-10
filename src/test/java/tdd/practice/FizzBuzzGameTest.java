@@ -27,8 +27,8 @@ public class FizzBuzzGameTest {
     }
 
     @Test
-    public void should_return_FizzBuzz_when_input_15() {
-        assertFizzBuzzRule(15, "FizzBuzz");
+    public void should_return_Buzz_when_input_15() {
+        assertFizzBuzzRule(15, "Buzz");
     }
 
     @Test
@@ -42,8 +42,8 @@ public class FizzBuzzGameTest {
     }
 
     @Test
-    public void should_return_FizzBuzzWhizz_when_input_105() {
-        assertFizzBuzzRule(105, "FizzBuzzWhizz");
+    public void should_return_BuzzWhizz_when_input_105() {
+        assertFizzBuzzRule(105, "BuzzWhizz");
     }
 
     @Test
@@ -104,6 +104,11 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_input_357() {
         assertFizzBuzzRule(357, "Fizz");
+    }
+
+    @Test
+    public void should_return_Buzz_when_input_165() {
+        assertFizzBuzzRule(165, "Buzz");
     }
 
     private void assertFizzBuzzRule(int num, String expected) {

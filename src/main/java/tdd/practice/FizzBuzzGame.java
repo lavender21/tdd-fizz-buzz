@@ -31,8 +31,10 @@ public class FizzBuzzGame {
     }
 
     private void handleContain5() {
-        if (isContains("7") && isContains("3")) {
-            output = "Fizz";
+        if (isContains("7")) {
+            handleContain7();
+        } else {
+            mod5And7();
         }
     }
 
@@ -41,20 +43,11 @@ public class FizzBuzzGame {
             handleContain3();
             return;
         }
-        if (isMultiple(7)) {
-            mod3And7();
-            return;
-        }
-        mod3();
+        mod3And7();
     }
 
     private void handleContain3() {
-
-        if (isContains("5")) {
-            mod5And7();
-        } else {
-            output = "Fizz";
-        }
+        output = "Fizz";
     }
 
     private void mod3() {
