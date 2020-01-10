@@ -20,7 +20,13 @@ public class FizzBuzzGame {
         if (isContains("3")) {
             contain3();
         } else if (isContains("7")) {
-            mod3();
+            if (isMultiple(7)) {
+                output = "";
+                mod3();
+                mod7();
+            } else {
+                mod3();
+            }
         }
 
         output = output.length() > 0 ? output : defaultValue;
