@@ -2,9 +2,15 @@ package tdd.practice;
 
 public class FizzBuzzGame {
     private int num;
+    private String output;
 
     public FizzBuzzGame(int input) {
         num = input;
+        output = Integer.toString(input);
+    }
+
+    public String getOutput() {
+        return output;
     }
 
     public String parse() {
@@ -20,6 +26,7 @@ public class FizzBuzzGame {
         } else if (isContains("7") && isMultiple(3)) {
             result = "Fizz";
         }
+        output = result.length() > 0 ? result : output;
         return result.length() > 0 ? result :Integer.toString(num);
     }
 
