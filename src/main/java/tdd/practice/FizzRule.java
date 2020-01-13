@@ -10,7 +10,9 @@ public class FizzRule extends Rule {
             }
         }
         if(isContains(num, 7) && !isContains(num, 3)) {
-            return FIZZ;
+            if (isMultiple(num, 3)) {
+                return FIZZ;
+            }
         }
         return "";
     }

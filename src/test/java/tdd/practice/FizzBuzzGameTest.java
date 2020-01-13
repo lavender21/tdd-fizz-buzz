@@ -67,6 +67,11 @@ public class FizzBuzzGameTest {
         assertFizzBuzz(177, "Fizz");
     }
 
+    @Test
+    public void return_Whizz_when_input_is_70_contain7_and_multiple7() {
+        assertFizzBuzz(70, "Whizz");
+    }
+
     private void assertFizzBuzz(int input, String result) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         assertThat(fizzBuzzGame.say(input)).isEqualTo(result);

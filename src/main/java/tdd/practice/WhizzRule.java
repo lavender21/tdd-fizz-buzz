@@ -9,6 +9,9 @@ public class WhizzRule extends Rule {
                 return WHIZZ;
             }
         }
+        if(isContains(num, 7) && isMultiple(num, 7)) {
+            return WHIZZ;
+        }
         return "";
     }
 }
