@@ -11,17 +11,12 @@ public class FizzBuzzGame {
 
     public String parse() {
         String defaultValue = Integer.toString(num);
+
         mod3And5And7();
 
-        if (isContains("3")) {
-            handleContain3();
-        }
-        if (isContains("7")) {
-            handleContain7();
-        }
-        if (isContains("5")) {
-            handleContain5();
-        }
+        if (isContains("3")) handleContain3();
+        if (isContains("5")) handleContain5();
+        if (isContains("7")) handleContain7();
 
         return output.length() > 0 ? output : defaultValue;
     }
@@ -37,9 +32,9 @@ public class FizzBuzzGame {
     private void handleContain7() {
         if (isContains("3")) {
             handleContain3();
-            return;
+        } else {
+            mod3And7();
         }
-        mod3And7();
     }
 
     private void handleContain3() {
