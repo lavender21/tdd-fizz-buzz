@@ -48,7 +48,7 @@ public class FizzBuzzGameTest {
     }
 
     @Test
-    public void return_Buzz_when_input_is_10_contain5_not_contain7() {
+    public void return_Buzz_when_input_is_15_contain5_not_contain7() {
         assertFizzBuzz(15, "Buzz");
     }
 

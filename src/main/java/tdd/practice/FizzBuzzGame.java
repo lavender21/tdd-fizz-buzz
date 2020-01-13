@@ -8,11 +8,15 @@ public class FizzBuzzGame {
             }
         }
         if (isContains(num, 5) && !isContains(num, 7)) {
-            if (num % 5 == 0) {
+            if (isMultiple(num, 5)) {
                 return "Buzz";
             }
         }
         return null;
+    }
+
+    private boolean isMultiple(int num, int divisor) {
+        return num % divisor == 0;
     }
 
     private boolean isContains(int num, int base) {
