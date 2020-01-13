@@ -7,6 +7,11 @@ public class FizzBuzzGame {
                 return "Fizz";
             }
         }
+        if (isContains(num, 5) && !isContains(num, 7)) {
+            if (num % 5 == 0) {
+                return "Buzz";
+            }
+        }
         return null;
     }
 

@@ -14,9 +14,9 @@ import static org.assertj.core.api.Assertions.*;
     203 Fizz
 包含5 不包含7
     5的倍数 Buzz
-    10 Buzz
+    15 Buzz
     7的倍数 Whizz
-
+    252 Whizz
     5，7的倍数 BuzzWhizz
     35 BuzzWhizz
 
@@ -45,6 +45,11 @@ public class FizzBuzzGameTest {
     @Test
     public void return_Fizz_when_input_is_37_contain_3_and_7() {
         assertFizzBuzz(37, "Fizz");
+    }
+
+    @Test
+    public void return_Buzz_when_input_is_10_contain5_not_contain7() {
+        assertFizzBuzz(15, "Buzz");
     }
 
     private void assertFizzBuzz(int input, String result) {
