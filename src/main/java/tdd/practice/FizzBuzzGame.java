@@ -12,12 +12,14 @@ public class FizzBuzzGame {
             }
         }
         if (isContains(num, 5) && !isContains(num, 7)) {
+            String result = "";
             if (isMultiple(num, 5)) {
-                return BUZZ;
+                result = BUZZ;
             }
             if (isMultiple(num, 7)) {
-                return WHIZZ;
+                result +=WHIZZ;
             }
+            return result;
         }
         return null;
     }
