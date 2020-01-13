@@ -14,6 +14,9 @@ public class FizzRule extends Rule {
                 return FIZZ;
             }
         }
+        if(!isContains(num, 3) && !isContains(num, 5) && !isContains(num, 7) && isMultiple(num, 3)) {
+            return FIZZ;
+        }
         return "";
     }
 }
