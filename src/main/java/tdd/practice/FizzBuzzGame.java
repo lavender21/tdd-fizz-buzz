@@ -21,6 +21,9 @@ public class FizzBuzzGame {
             }
             return result;
         }
+        if (isContains(num, 7) && !isContains(num, 3)) {
+            return FIZZ;
+        }
         return null;
     }
 
