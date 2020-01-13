@@ -1,30 +1,26 @@
 package tdd.practice;
 
+
 public class FizzBuzzGame {
     private final String FIZZ = "Fizz";
     private final String BUZZ = "Buzz";
     private final String WHIZZ = "Whizz";
 
     public String say(int num) {
-        if (isContains(num, 3)){
-            if (!isContains(num, 5) || isContains(num, 7)) {
-                return FIZZ;
-            }
-        }
+        String result = "";
+        FizzRule fizzRule = new FizzRule();
+        result = fizzRule.match(num);
+
         if (isContains(num, 5) && !isContains(num, 7)) {
-            String result = "";
             if (isMultiple(num, 5)) {
                 result = BUZZ;
             }
             if (isMultiple(num, 7)) {
-                result +=WHIZZ;
+                result += WHIZZ;
             }
             return result;
         }
-        if (isContains(num, 7) && !isContains(num, 3)) {
-            return FIZZ;
-        }
-        return null;
+        return result;
     }
 
     private boolean isMultiple(int num, int divisor) {
