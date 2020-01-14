@@ -5,7 +5,7 @@ public class FizzRule extends Rule {
 
     public String match(int num) {
         if (isContains(num, FIZZ_NUM) || isMultiple(num, FIZZ_NUM)){
-            return notContains(num, BUZZ_NUM) ? FIZZ : "";
+            return notContains(num, BUZZ_NUM) || isContains(num, WHIZZ_NUM) ? FIZZ : "";
         }
         return "";
     }

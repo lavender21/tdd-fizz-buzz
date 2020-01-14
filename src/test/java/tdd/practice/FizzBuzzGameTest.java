@@ -43,6 +43,11 @@ public class FizzBuzzGameTest {
     }
 
     @Test
+    public void return_Fizz_when_input_is_30_contain3_but_not_contain5() {
+        assertFizzBuzz(30, "Fizz");
+    }
+
+    @Test
     public void return_Fizz_when_input_is_37_contain_3_and_7() {
         assertFizzBuzz(37, "Fizz");
     }
@@ -65,6 +70,11 @@ public class FizzBuzzGameTest {
     @Test
     public void return_Fizz_when_input_is_177_contain7_and_multiple3() {
         assertFizzBuzz(177, "Fizz");
+    }
+
+    @Test
+    public void return_Fizz_when_input_is_57_contain7_and_multiple3() {
+        assertFizzBuzz(57, "Fizz");
     }
 
     @Test
@@ -120,6 +130,17 @@ public class FizzBuzzGameTest {
     @Test
     public void return_1_when_input_is_1_no_multiple_no_contains() {
         assertFizzBuzz(1, "1");
+    }
+
+    @Test void return_1_to_200_fizz_buzz_game_result() {
+        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+        String result = "";
+        for( int i = 1; i <= 200; i++) {
+            result += fizzBuzzGame.say(i) + " ";
+        }
+
+        String expect = "1 2 Fizz 4 Buzz Fizz Whizz 8 Fizz Buzz 11 Fizz Fizz Whizz Buzz 16 17 Fizz 19 Buzz FizzWhizz 22 Fizz Fizz Buzz 26 Fizz Whizz 29 Fizz Fizz Fizz Fizz Fizz BuzzWhizz Fizz Fizz Fizz Fizz Buzz 41 FizzWhizz Fizz 44 Buzz 46 47 Fizz Whizz Buzz 51 52 53 54 Buzz Whizz Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Whizz 71 Fizz Fizz 74 Fizz 76 Whizz Fizz 79 Buzz Fizz 82 Fizz FizzWhizz Buzz 86 Fizz 88 89 FizzBuzz Whizz 92 Fizz 94 Buzz Fizz 97 Whizz Fizz Buzz 101 Fizz Fizz 104 BuzzWhizz 106 107 Fizz 109 Buzz Fizz Whizz Fizz Fizz Buzz 116 Fizz 118 Whizz FizzBuzz 121 122 Fizz 124 Buzz FizzWhizz 127 128 Fizz Fizz Fizz Fizz Fizz Fizz Buzz Fizz Fizz Fizz Fizz BuzzWhizz Fizz 142 Fizz Fizz Buzz 146 FizzWhizz 148 149 Buzz 151 152 153 Whizz Buzz 156 157 158 159 Buzz Whizz Fizz Fizz 164 Buzz 166 167 FizzWhizz 169 170 Fizz 172 Fizz Fizz Whizz 176 Fizz 178 179 FizzBuzz 181 Whizz Fizz 184 Buzz Fizz 187 188 FizzWhizz Buzz 191 Fizz Fizz 194 Buzz Whizz 197 Fizz 199 Buzz ";
+        assertThat(result).isEqualTo(expect);
     }
 
     private void assertFizzBuzz(int input, String result) {
