@@ -7,7 +7,7 @@ public class BuzzRule extends Rule {
         if (isContains(num, FIZZ_NUM) && notContains(num, BUZZ_NUM)) {
             return "";
         }
-        if (notContains(num, WHIZZ_NUM) || notContainsAllRuleNums(num)) {
+        if (notContains(num, WHIZZ_NUM)) {
             return isMultiple(num, BUZZ_NUM) ? BUZZ : "";
         }
         return "";
