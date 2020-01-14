@@ -1,8 +1,6 @@
 package tdd.practice;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 public class FizzRule extends Rule {
     private final String FIZZ = "Fizz";
