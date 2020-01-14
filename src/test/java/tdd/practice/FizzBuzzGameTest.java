@@ -112,6 +112,11 @@ public class FizzBuzzGameTest {
         assertFizzBuzz(210, "FizzBuzzWhizz");
     }
 
+    @Test
+    public void return_1_when_input_is_1_no_multiple_no_contains() {
+        assertFizzBuzz(1, "1");
+    }
+
     private void assertFizzBuzz(int input, String result) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         assertThat(fizzBuzzGame.say(input)).isEqualTo(result);

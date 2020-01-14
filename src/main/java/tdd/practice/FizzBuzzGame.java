@@ -13,6 +13,6 @@ public class FizzBuzzGame {
         result += buzzRule.match(num);
         result += whizzRule.match(num);
 
-        return result;
+        return result.length() > 0 ? result : String.valueOf(num);
     }
 }
