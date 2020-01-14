@@ -1,5 +1,9 @@
 package tdd.practice;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
 public class FizzRule extends Rule {
     private final String FIZZ = "Fizz";
 
@@ -14,7 +18,7 @@ public class FizzRule extends Rule {
                 return FIZZ;
             }
         }
-        if(!isContains(num, 3) && !isContains(num, 5) && !isContains(num, 7) && isMultiple(num, 3)) {
+        if(notContains(num, Arrays.asList(3,5,7)) && isMultiple(num, 3)) {
             return FIZZ;
         }
         return "";
