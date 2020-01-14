@@ -17,8 +17,8 @@ public class Rule {
         return String.valueOf(num).contains(String.valueOf(base));
     }
 
-    protected boolean notContainsAllRuleNums(int num) {
-        return ruleNumList.stream().allMatch(item -> !isContains(num, item));
+    protected boolean containsAllRuleNums(int num) {
+        return ruleNumList.stream().allMatch(item -> isContains(num, item));
     }
 
     protected boolean notContains(int num, int base) {

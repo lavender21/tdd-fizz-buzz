@@ -53,6 +53,11 @@ public class FizzBuzzGameTest {
     }
 
     @Test
+    public void return_Fizz_when_input_is_357_contain_3_and_7_and5() {
+        assertFizzBuzz(357, "Fizz");
+    }
+
+    @Test
     public void return_Buzz_when_input_is_15_contain5_not_contain7() {
         assertFizzBuzz(15, "Buzz");
     }
