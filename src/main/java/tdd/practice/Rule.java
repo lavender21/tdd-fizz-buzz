@@ -18,11 +18,11 @@ public class Rule {
     }
 
     protected boolean notContainsAllRuleNums(int num) {
-        return notContains(num, ruleNumList);
+        return ruleNumList.stream().allMatch(item -> !isContains(num, item));
     }
 
-    protected boolean notContains(int num, List<Integer> list) {
-        return list.stream().allMatch(item -> !isContains(num, item));
+    protected boolean notContains(int num, int base) {
+        return !isContains(num, base);
     }
 }
 
