@@ -6,12 +6,12 @@ public class BuzzRule extends Rule {
     private final String BUZZ = "Buzz";
 
     public String match(int num) {
-        if (isContains(num, 5) && !isContains(num, 7)) {
-            if (isMultiple(num, 5)) {
+        if (isContains(num, BUZZ_NUM) && !isContains(num, WHIZZ_NUM)) {
+            if (isMultiple(num, BUZZ_NUM)) {
                 return BUZZ;
             }
         }
-        if(notContains(num, Arrays.asList(3,5,7)) && isMultiple(num, 5)) {
+        if(notContainsAllRuleNums(num) && isMultiple(num, BUZZ_NUM)) {
             return BUZZ;
         }
         return "";

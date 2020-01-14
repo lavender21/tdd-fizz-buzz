@@ -1,20 +1,18 @@
 package tdd.practice;
 
-import java.util.Arrays;
-
 public class WhizzRule extends Rule {
     private final String WHIZZ = "Whizz";
 
     public String match(int num) {
-        if (isContains(num, 5) && !isContains(num, 7)) {
-            if (isMultiple(num, 7)) {
+        if (isContains(num, BUZZ_NUM) && !isContains(num, WHIZZ_NUM)) {
+            if (isMultiple(num, WHIZZ_NUM)) {
                 return WHIZZ;
             }
         }
-        if(isContains(num, 7) && isMultiple(num, 7)) {
+        if(isContains(num, WHIZZ_NUM) && isMultiple(num, WHIZZ_NUM)) {
             return WHIZZ;
         }
-        if(notContains(num, Arrays.asList(3,5,7)) && isMultiple(num, 7)) {
+        if(notContainsAllRuleNums(num) && isMultiple(num, WHIZZ_NUM)) {
             return WHIZZ;
         }
         return "";
