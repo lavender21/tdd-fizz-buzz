@@ -21,7 +21,7 @@ public class Rule {
         return notContains(num, ruleNumList);
     }
 
-    private boolean notContains(int num, List<Integer> list) {
+    protected boolean notContains(int num, List<Integer> list) {
         return list.stream().allMatch(item -> !isContains(num, item));
     }
 }

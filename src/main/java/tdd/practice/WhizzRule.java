@@ -1,5 +1,7 @@
 package tdd.practice;
 
+import java.util.Arrays;
+
 public class WhizzRule extends Rule {
     private final String WHIZZ = "Whizz";
 
@@ -9,10 +11,7 @@ public class WhizzRule extends Rule {
                 return WHIZZ;
             }
         }
-        if(isContains(num, WHIZZ_NUM) && isMultiple(num, WHIZZ_NUM)) {
-            return WHIZZ;
-        }
-        if(notContainsAllRuleNums(num) && isMultiple(num, WHIZZ_NUM)) {
+        if(notContains(num, Arrays.asList(FIZZ_NUM, BUZZ_NUM)) && isMultiple(num, WHIZZ_NUM)) {
             return WHIZZ;
         }
         return "";

@@ -1,7 +1,5 @@
 package tdd.practice;
 
-import java.util.Arrays;
-
 public class BuzzRule extends Rule {
     private final String BUZZ = "Buzz";
 
