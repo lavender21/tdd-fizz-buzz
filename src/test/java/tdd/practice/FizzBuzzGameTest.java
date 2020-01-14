@@ -92,6 +92,26 @@ public class FizzBuzzGameTest {
         assertFizzBuzz(49, "Whizz");
     }
 
+    @Test
+    public void return_FizzBuzz_when_input_is_60_multiple3_and5() {
+        assertFizzBuzz(60, "FizzBuzz");
+    }
+
+    @Test
+    public void return_FizzWhizz_when_input_is_21_multiple3_and7() {
+        assertFizzBuzz(21, "FizzWhizz");
+    }
+
+    @Test
+    public void return_BuzzWhizz_when_input_is_140_multiple5_and7() {
+        assertFizzBuzz(140, "BuzzWhizz");
+    }
+
+    @Test
+    public void return_FizzBuzzWhizz_when_input_is_210_multiple5_and7_and3() {
+        assertFizzBuzz(210, "FizzBuzzWhizz");
+    }
+
     private void assertFizzBuzz(int input, String result) {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         assertThat(fizzBuzzGame.say(input)).isEqualTo(result);
