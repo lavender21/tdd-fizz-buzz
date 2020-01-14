@@ -11,7 +11,7 @@ public class WhizzRule extends Rule {
                 return WHIZZ;
             }
         }
-        if(notContains(num, Arrays.asList(FIZZ_NUM, BUZZ_NUM)) && isMultiple(num, WHIZZ_NUM)) {
+        if(notContains(num, Arrays.asList(FIZZ_NUM)) && isMultiple(num, WHIZZ_NUM)) {
             return WHIZZ;
         }
         return "";
